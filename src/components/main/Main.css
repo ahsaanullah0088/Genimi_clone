@@ -1,0 +1,109 @@
+.main{
+    flex: 1;
+    min-height: 100vh;
+    padding-bottom: 15vh;
+    position: relative;
+}
+.main .nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 20px;
+    color: #585858;
+}
+.main .nav img{
+    width: 40px;
+    border-radius:50% ;
+}
+.main-component{
+    max-width: 900px;
+    margin: auto;
+}
+ .main .great{
+    margin: 50px 0px;
+    font-size: 56px;
+    color: #c4c7c5;
+    font-weight: 500;
+    padding: 20px;
+
+}
+.main .great span{
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.main .great p{
+    font-size: 20px;
+    color: #585858;
+    padding: 20px;
+}
+.main .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+ .main .card {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.main .card img{
+    width: 35px;
+    position: relative;
+    background-color: white;
+    border-radius: 20px;
+    top: 15px;
+    left: 55px;
+}
+.main .card p{
+    color: #585858;
+    font-size: 17px;
+}
+.main .cards :hover{
+    background-color: #dfe4ea;
+}
+.main-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+}
+.searchbox{
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+.searchbox img{
+    width: 24px;
+    cursor: pointer;
+}
+.searchbox input{
+    flex: 1;
+    background:transparent;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 8px;
+}
+.searchbox div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.main .bottom-info{
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+}
