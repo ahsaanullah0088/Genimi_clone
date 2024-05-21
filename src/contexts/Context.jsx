@@ -12,24 +12,27 @@ const ContextProvider = (props) => {
   const [resultData, setResultData] = useState("");
 
   const delayPara = (index, nextWord) => {
-    setTimeout(function(){
-      setResultData(prev => prev + nextWord);
+    setTimeout(function () {
+      setResultData((prev) => prev + nextWord);
     }, 75 * index); // Correct syntax for multiplication
-  }
-  
+  };
+  const newChat = () => {
+    setLoading(false);
+    setShowResult(false);
+  };
 
   const onSent = async (prompt) => {
     setResultData("");
     setLoading(true);
     setShowResult(true);
-    
+
     let finalPrompt = prompt ? prompt : input;
-    
+
     try {
       const response = await run(finalPrompt); // Declare response here
       setRecentPrompt(finalPrompt);
-      setPrevPrompt(prev => [...prev, finalPrompt]);
-      
+      setPrevPrompt((prev) => [...prev, finalPrompt]);
+
       let responseArray = response.split("**");
       let newResponse = "";
       for (let i = 0; i < responseArray.length; i++) {
@@ -68,12 +71,11 @@ const ContextProvider = (props) => {
     resultData,
     setResultData,
     onSent,
+    newChat,
   };
 
   return (
-    <Context.Provider value={contextValue}>
-      {props.children}
-    </Context.Provider>
+    <Context.Provider value={contextValue}>{props.children}</Context.Provider>
   );
 };
 

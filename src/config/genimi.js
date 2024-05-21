@@ -1,4 +1,3 @@
-
 /*
  * Install the Generative AI SDK
  *
@@ -52,8 +51,7 @@ async function run(prompt) {
   const chatSession = model.startChat({
     generationConfig,
     safetySettings,
-    history: [
-    ],
+    history: [],
   });
 
   const result = await chatSession.sendMessage(prompt);
@@ -61,4 +59,4 @@ async function run(prompt) {
   return result.response.text();
 }
 
- export default run;
+export default run;
